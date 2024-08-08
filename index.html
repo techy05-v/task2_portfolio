@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <style>
+        .container {
+            position: relative;
+        }
+        
+        .header-text {
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 30px;
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .header-text {
+                flex-direction: column;
+            }
+            
+            .profile-photo {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <div class="nav-links">
+                <ul id="sidemenu">
+                    <li><a href="#header"><span>Home</span></a></li>
+                    <li><a href="#about"><span>About</span></a></li>
+                    <li><a href="#services"><span>Services</span></a></li>
+                    <li><a href="#portfolio"><span>Portfolio</span></a></li>
+                    <li><a href="#resume"><span>Resume</span></a></li>
+                    <li><a href="#contact"><span>Contact</span></a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <div>
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Vishnu P R</span><br>Jen From India</h1>
+            </div>
+            <div class="profile-photo">
+                <div class="photo-container">
+                    <img src="images/20240803_160838.jpg" alt="Profile Photo">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container bg-dark">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/b1lyi-0vm7b (1).avif">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, my name is Vishnu, and I have recently completed my B.Tech. I am currently working as a MERN stack developer. My passion for web development led me to specialize in the MERN stack, which includes MongoDB, Express.js, React, and Node.js. Throughout my academic and professional journey, I have developed a strong foundation in creating dynamic and responsive web applications. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills and Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills and education" style="display: flex; column-gap: 100px;">
+                    <div class="skills">
+
+                    <ul>
+                        <li><span><h1 style="color: aliceblue;">Skills</h1></span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>JavaScript</span></li>
+                        <li><span>MongoDB</span></li>
+                        <li><span>Node.js</span></li>
+                    </ul>
+                    </div>
+                    <div class="edu">
+                        <h1>
+                            Education
+                        </h1>
+                        <ul>
+                            <li><span>2017</span><br> 10th from ST:Thomas HS Vallachira.</li>
+                            <li><span>2019</span><br>Plus Two from ST:Thomas HSS Vallachira.</li>
+                            <li><span>2024</span><br>BTech from Vidya Academy of Science and Technology</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Creating and maintaining websites using programming languages such as HTML, CSS, JavaScript.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>Backend Development</h2>
+                <p>Building server-side logic, databases, and APIs using languages like Node.js, Python, Ruby, or PHP.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Responsive Design</h2>
+                <p>Ensuring websites work well on various devices and screen sizes.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="resume">
+    <section id="resume-cv">
+        <h2>Download</h2>
+        <a href="documnet/Resume (1) (1).pdf" download aria-label="Download Resume">Download Resume</a>
+        <a href="documnet/Resume (1) (1).pdf" download aria-label="Download CV">Download CV</a>
+
+    </section>
+    
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/linkedin.avif">
+                <div class="layer">
+                    <h3>linkedin clone</h3>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/36zgw-j8i4j.avif">
+                <div class="layer">
+                    <h3>Amazone clone</h3>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/zomato.avif">
+                <div class="layer">
+                    <h3>Zomato clone</h3>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> ravivishnu929@gmail.com.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +916282162251</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/muhemmad.shahin.9?mibextid=ZbWKwL"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/__vishnu__smiley?igsh=dW9yZDNocmtsNmps"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                
+            </div>
+            <div class="contact-right">
+                <form id="submit-form" class="formlast" action="https://script.google.com/macros/s/AKfycbw3dt1StNqu4SWI3CUVRxGGlUze9HjmY7T-nrApdZ6esBcoA3RpLAdIuomMV741U9RY/exec" method="post">
+                    <div class="form-group">
+                        <input type="text" name="name" id="contact-name" class="form-control px-3 py-4" placeholder="Full Name" required onkeyup="validateName()">
+                        <span id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="contact-email" class="form-control px-3 py-4" placeholder="Your Email" required onkeyup="validateEmail()">
+                        <span id="email-error"></span>
+                    </div>
+                    <div class="form-group mb-5">
+                        <textarea name="message" id="contact-message" class="form-control px-3 py-4" cols="30" rows="10" placeholder="Write a Message" required onkeyup="validateMessage()"></textarea>
+                        <span id="msg-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary px-4 py-3" value="Send Message" onclick="return validateForm()">
+                        <span id="submit-error"></span>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="copyright">
+                <p>Copyright © Vishnu P R <i class="fas fa-heart"></i></p>
+            </div>
+            
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="script.js"></script>
+            <script>
+                $("#submit-form").submit(function(e) {
+                    e.preventDefault(); // Prevent default form submission
+            
+                    if (!validateForm()) {
+                        return; // If form validation fails, stop form submission
+                    }
+            
+                    $.ajax({
+                        url: $("#submit-form").attr("action"), // Use the form action URL
+                        data: $("#submit-form").serialize(),
+                        method: "post",
+                        success: function(response) {
+                            alert("Form submitted successfully");
+                            // Optionally redirect or reload
+                            window.location.reload();
+                        },
+                        error: function(err) {
+                            alert("Something went wrong");
+                        }
+                    });
+                });
+            </script>
+            
+
+</body>
+</html>
